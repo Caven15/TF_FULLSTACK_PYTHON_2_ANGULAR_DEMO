@@ -30,6 +30,8 @@ import { FanSerieComponent } from './components/exos/fan-serie/fan-serie.compone
 import { AjoutFanComponent } from './components/exos/fan-serie/ajout-fan/ajout-fan.component';
 import { StockageSessionComponent } from './components/demos/stockage-session/stockage-session.component';
 import { BehaviourSubjectComponent } from './components/demos/behaviour-subject/behaviour-subject.component';
+import { ConsoApiComponent } from './components/demos/conso-api/conso-api.component';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -60,7 +62,8 @@ import { BehaviourSubjectComponent } from './components/demos/behaviour-subject/
         AjoutComponent,
         AjoutFanComponent,
         StockageSessionComponent,
-        BehaviourSubjectComponent
+        BehaviourSubjectComponent,
+        ConsoApiComponent
     ],
     imports: [
         BrowserModule,
@@ -69,7 +72,8 @@ import { BehaviourSubjectComponent } from './components/demos/behaviour-subject/
         ReactiveFormsModule
     ],
     providers: [
-        provideClientHydration()
+        provideClientHydration(),
+        provideHttpClient( withFetch()) // => Utilisation du module http client
     ],
     bootstrap: [AppComponent]
 })

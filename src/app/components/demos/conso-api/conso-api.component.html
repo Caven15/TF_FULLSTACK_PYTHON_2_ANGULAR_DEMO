@@ -1,0 +1,17 @@
+<h1>Liste des posts (articles)</h1>
+<div class="box">
+    @if (error.length == 0) {
+        @if (posts.length > 0) {
+            @for (post of posts; track post.id) {
+                <fieldset>
+                    <legend>{{post.id}} | {{post.title}}</legend>
+                    <p>{{post.body}}</p>
+                </fieldset>
+            }
+        }@else {
+            <p>La liste est vide...</p>
+        }
+    } @else {
+        <p>{{error}}</p>
+    }
+</div>

@@ -19,6 +19,7 @@ import { UpdateComponent } from './components/exos/fan-serie/update/update.compo
 import { AjoutFanComponent } from './components/exos/fan-serie/ajout-fan/ajout-fan.component';
 import { StockageSessionComponent } from './components/demos/stockage-session/stockage-session.component';
 import { BehaviourSubjectComponent } from './components/demos/behaviour-subject/behaviour-subject.component';
+import { ConsoApiComponent } from './components/demos/conso-api/conso-api.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent},
@@ -32,7 +33,8 @@ const routes: Routes = [
         { path: 'routing', component:  RoutingComponent},
         { path: 'profil/:id', component:  ProfilUserComponent},
         { path: 'stockage-session', component:  StockageSessionComponent},
-        { path: 'behaviour-subject', component:  BehaviourSubjectComponent}
+        { path: 'behaviour-subject', component:  BehaviourSubjectComponent},
+        { path: 'conso-api', component:  ConsoApiComponent}
 
     ]},
     { path: 'exos', children: [
