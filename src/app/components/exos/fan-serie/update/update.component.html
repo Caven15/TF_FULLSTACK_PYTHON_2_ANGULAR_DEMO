@@ -1,1 +1,53 @@
-<p>update works!</p>
+<h1>Update de fan</h1>
+<div class="box">
+    <form [formGroup]="updateFanForm" (ngSubmit)="sauvegardeModif()">
+        <div id="input-nom">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" formControlName="nom"/>
+            @if (updateFanForm.get('nom')?.invalid && updateFanForm.get('nom')?.touched) {
+                @if (updateFanForm.get('nom')?.errors?.['required']) {
+                    <p class="error">Le nom est obligatoire.</p>
+                }
+            }
+        </div>
+
+        <div id="input-date-naissance">
+            <label for="dateNaissance">Date de Naissance :</label>
+            <input type="date" id="dateNaissance" formControlName="dateNaissance"/>
+            @if (updateFanForm.get('dateNaissance')?.invalid && updateFanForm.get('dateNaissance')?.touched) {
+                @if (updateFanForm.get('dateNaissance')?.errors?.['required']) {
+                    <p class="error">Le date de naissance est obligatoire.</p>
+                }
+                @if (updateFanForm.get('dateNaissance')?.errors?.['tropJeune']) {
+                    <p class="error">{{updateFanForm.get('dateNaissance')?.errors?.['tropJeune']}}</p>
+                }
+            }
+        </div>
+
+        <div id="input-series" formArrayName="series">
+
+            <label>Séries préférées :</label>
+            <button type="button" (click)="ajouterSerie()">Ajouter série</button>
+            @for (serie of series.controls; track $index) {
+                <input formControlName="{{$index}}" type="text" placeholder="Titre de la série..."/>
+                @if (series.length > 1) {
+                    <button type="button" (click)="supprimerSerie($index)" >Supprimer</button>
+                }
+                @if (serie.invalid && serie.touched) {
+                    <p class="error">Le titre de la série est obligatoire.</p>
+                }
+            }
+        </div>
+
+        <div>
+            <button type="submit">Sauvegarder</button>
+            <button routerLink="/exos/liste-fan">Retour</button>
+        </div>
+
+        <div class="error">
+            @if (error) {
+                <p>{{error}}</p>
+            }
+        </div>
+    </form>
+</div>zzzzzz

@@ -55,6 +55,7 @@ import { AjoutFanComponent } from './components/exos/fan-serie/ajout-fan/ajout-f
         ListComponent,
         UpdateComponent,
         FanSerieComponent,
+        AjoutComponent,
         AjoutFanComponent
     ],
     imports: [
