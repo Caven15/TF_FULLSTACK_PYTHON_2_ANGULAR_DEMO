@@ -28,6 +28,7 @@ import { ListComponent } from './components/exos/fan-serie/list/list.component';
 import { UpdateComponent } from './components/exos/fan-serie/update/update.component';
 import { FanSerieComponent } from './components/exos/fan-serie/fan-serie.component';
 import { AjoutFanComponent } from './components/exos/fan-serie/ajout-fan/ajout-fan.component';
+import { StockageSessionComponent } from './components/demos/stockage-session/stockage-session.component';
 
 @NgModule({
     declarations: [
@@ -56,7 +57,8 @@ import { AjoutFanComponent } from './components/exos/fan-serie/ajout-fan/ajout-f
         UpdateComponent,
         FanSerieComponent,
         AjoutComponent,
-        AjoutFanComponent
+        AjoutFanComponent,
+        StockageSessionComponent
     ],
     imports: [
         BrowserModule,

@@ -1,0 +1,27 @@
+<h1>sessionStorage / localStorage</h1>
+
+
+
+<fieldset>
+    <legend>localStorage</legend>
+    <button (click)="enregistretDansLocalStorage()">Save</button>
+    <button (click)="recupererDepuisLocalStorage()">Get</button>
+    <button (click)="supprimerLocalStorage()">Delete</button>
+    @if (donneesLocale) {
+        <h3>Données dans localStorage</h3>
+        <p>{{donneesLocale | json}}</p>
+    }
+</fieldset>
+
+
+
+<fieldset>
+    <legend>sessionStorage</legend>
+    <button (click)="enregistretDansSessionStorage()">Save</button>
+    <button (click)="recupererDepuisSessionStorage()">Get</button>
+    <button (click)="supprimerSessionStorage()">Delete</button>
+    @if (donneesSession) {
+        <h3>Données dans sessionStorage</h3>
+        <p>{{donneesSession | json}}</p>
+    }
+</fieldset>
