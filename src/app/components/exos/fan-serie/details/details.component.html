@@ -1,0 +1,20 @@
+<h1>Détails</h1>
+<div class="box">
+    @if (fan) {
+
+        <p> Nom : {{fan.nom}}</p>
+        <p>Date de naissance :{{fan.dateNaissance | date : 'dd/MM/yyyy'}}</p>
+
+        <p>Séries préférées :</p>
+        <ul>
+            @for (serie of fan.series; track $index) {
+                <li>{{serie}}</li>
+            }
+        </ul>
+    } @else {
+        <p>Fan introuvable ou inexistant.</p>
+    }
+    <button routerLink="/exos/liste-fan">Retour à la liste</button>
+    <button (click)="updateFan()">Mise à jour</button>
+    <button (click)="suppressionFan()">Suppression</button>
+</div>

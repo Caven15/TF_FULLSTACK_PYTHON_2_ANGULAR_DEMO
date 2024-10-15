@@ -1,0 +1,24 @@
+<h1>Liste fans</h1>
+<div class="box">
+    <button routerLink="/exos/ajout-fan">Ajouter un nouveau fan</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Date de naissance</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (fan of fans; track $index) {
+            <tr>
+                <td>{{fan.id}}</td>
+                <td>{{fan.nom}}</td>
+                <td>{{fan.dateNaissance | date:'dd/MM/yyyy'}}</td>
+                <td><button (click)="voirDetails(fan.id)">Détails</button></td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

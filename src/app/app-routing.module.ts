@@ -12,6 +12,11 @@ import { ShoppingListServiceComponent } from './components/exos/shopping-list-se
 import { FormulaireComponent } from './components/demos/formulaire/formulaire.component';
 import { RoutingComponent } from './components/demos/routing/routing/routing.component';
 import { ProfilUserComponent } from './components/demos/routing/profil-user/profil-user.component';
+import { ListComponent } from './components/exos/fan-serie/list/list.component';
+import { DetailsComponent } from './components/exos/fan-serie/details/details.component';
+import { AjoutComponent } from './components/exos/shoppingList/ajout/ajout.component';
+import { UpdateComponent } from './components/exos/fan-serie/update/update.component';
+import { AjoutFanComponent } from './components/exos/fan-serie/ajout-fan/ajout-fan.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent},
@@ -24,11 +29,17 @@ const routes: Routes = [
         { path: 'formulaire', component:  FormulaireComponent},
         { path: 'routing', component:  RoutingComponent},
         { path: 'profil/:id', component:  ProfilUserComponent}
+
     ]},
     { path: 'exos', children: [
         { path: 'directive', component: ListeProduitsComponent },
         { path: 'inputOutput', component: ShoppingComponent },
-        { path: 'service', component: ShoppingListServiceComponent }
+        { path: 'service', component: ShoppingListServiceComponent },
+
+        { path: 'liste-fan', component:  ListComponent},
+        { path: 'details-fan/:id', component:  DetailsComponent},
+        { path: 'ajout-fan', component:  AjoutFanComponent},
+        { path: 'update-fan/:id', component:  UpdateComponent}
     ]}
 ];
 
