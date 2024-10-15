@@ -18,6 +18,7 @@ import { AjoutComponent } from './components/exos/shoppingList/ajout/ajout.compo
 import { UpdateComponent } from './components/exos/fan-serie/update/update.component';
 import { AjoutFanComponent } from './components/exos/fan-serie/ajout-fan/ajout-fan.component';
 import { StockageSessionComponent } from './components/demos/stockage-session/stockage-session.component';
+import { BehaviourSubjectComponent } from './components/demos/behaviour-subject/behaviour-subject.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent},
@@ -30,7 +31,8 @@ const routes: Routes = [
         { path: 'formulaire', component:  FormulaireComponent},
         { path: 'routing', component:  RoutingComponent},
         { path: 'profil/:id', component:  ProfilUserComponent},
-        { path: 'stockage-session', component:  StockageSessionComponent}
+        { path: 'stockage-session', component:  StockageSessionComponent},
+        { path: 'behaviour-subject', component:  BehaviourSubjectComponent}
 
     ]},
     { path: 'exos', children: [

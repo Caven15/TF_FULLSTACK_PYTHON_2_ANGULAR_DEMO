@@ -29,6 +29,7 @@ import { UpdateComponent } from './components/exos/fan-serie/update/update.compo
 import { FanSerieComponent } from './components/exos/fan-serie/fan-serie.component';
 import { AjoutFanComponent } from './components/exos/fan-serie/ajout-fan/ajout-fan.component';
 import { StockageSessionComponent } from './components/demos/stockage-session/stockage-session.component';
+import { BehaviourSubjectComponent } from './components/demos/behaviour-subject/behaviour-subject.component';
 
 @NgModule({
     declarations: [
@@ -58,7 +59,8 @@ import { StockageSessionComponent } from './components/demos/stockage-session/st
         FanSerieComponent,
         AjoutComponent,
         AjoutFanComponent,
-        StockageSessionComponent
+        StockageSessionComponent,
+        BehaviourSubjectComponent
     ],
     imports: [
         BrowserModule,
